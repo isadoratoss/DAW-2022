@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nanum Myeongjo', serif;
+}    
+
+header { /* TOP RIGHT BOTTOM LEFT */
+    padding: 20px 20px 0 20px;
+}
+
+header > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+header .brand img {
+    width: 120px;
+}
+
+header .brand h6 {
+    font-size: 24px;
+    color: #080808;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 16px;
+}
+
+header ul li {
+    font-weight: 300;
+    line-height: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 16px;   
+}
+
+header li a:hover,
+header li a.active {
+    color: #0d0d0d;
+}
+
+header li a.active {
+    font-weight: 400;
+    border-bottom: 2px solid #de9b09;
+}
+
+header li button {
+    background-color: #e79005;
+    color: #fff;
+    border: none;
+    text-transform: uppercase; 
+    font-weight: 300;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-left: 16px;
+    line-height: 20px;
+}
+
+main {
+    margin: 32px 0;
+}
+
+main h2 {
+    margin: 32px 0;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 56px;
+    text-align: center;
+    color: #022008;
+}
+
+section {
+    margin-top: 64px;
+}
+
+#banner {
+    height: 550px;
+    border: 1px solid #dcdceb;
+    border-radius: 10px;
+    color: #f5f7f4;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#banner h1 {
+    margin: 60px 0 0 45px;
+    font-weight: 300;
+    font-size: 62px;
+}
+
+#banner h3 {
+    margin-top: 16px;
+    margin-left: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+#cards .cards-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#cards .card {
+    width: 530px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%)
+    0px 1px 3px 0px;
+    padding: 20px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+#cards .card img {
+    width: 160px;
+    height: 180px;
+}
+
+#cards .card h4 {
+    font-weight: 400;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+#cards .card p {
+    font-weight: 300;
+    margin-bottom: 12px;
+    text-align: justify;
+    color: #8f90a6;
+    max-height: 72px;
+    overflow: hidden;
+}
+
+#cards .card .card-price {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    right: 20px;
+    bottom: 20px;
+}
+
+#cards .card-price {
+    background-color: #0889d4;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+#reason {
+    margin-top: 0;
+}
+
+#reason .reasons-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+#reason .reasons-content .reason{
+    width: 100%;
+    border-left: 2px solid #0889d4;
+}
+
+#reason .reason p {
+    text-align: center;
+}
+
+#reason .reason:first-of-type {
+    border-left: none;
+}
+
+#reason .reason .reason-label {
+    font-size: 24px;
+    font-weight: 300;
+    color: #8f90a6;
+}
+
+#depoiments .depoiments-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+#values .values-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+#values .values-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+#values .values-content p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#values .value-detail {
+    padding: 32px;
+}
+
+#values .value-detail .value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #d84c05;
+    color: #fff;
+    margin-top: 48px;
+    padding: 48px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .footer-company {
+    width: 450px;
+}
+
+footer .footer-company .footer-logo {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32px;
+    padding-left: 40px;
+    background-image: url('../img/logo_cura_herbal.PNG');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: 32px;
+    margin-bottom: 16px;
+}
+
+footer .footer-company p {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+footer .footer-menu {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+footer .footer-menu-title {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer .footer-menu ul {
+    list-style-type: none;
+    margin-top: 16px;
+}
+
+footer .footer-menu li{
+    margin-bottom: 8px;
+}
+
+footer .footer-copright {
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+} 
+body.values-container{
+   background-image: 10px;
+    background-size: 20px;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+footer .footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 24px;
+}
+footer .footer-social .facebook {
+    background-image: url('../img/icon-facebook.svg');
+}
+footer .footer-social .instagram {
+    background-image: url('../img/icon-instagram.svg');
+}
+footer .footer-social .linkedin {
+    background-image: url('../img/icon-linkedin.svg');
+}
+footer .footer-social .twitter {
+    background-image: url('../img/icon-twitter.svg');
+}
