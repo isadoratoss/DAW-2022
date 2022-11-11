@@ -20,7 +20,11 @@ export function SectionCards() {
                             <p>{ item.descricao }</p>
 
                             <div className="card-price">
-                                <p>{ item.preco }</p>
+                                 <p>
+                                    <IntProvider locale="pt-BR">
+                                        <FormattedNumber value={item.preco} style="currency"currency="BRL" />
+                                    </IntProvider>
+                                </p>
                             </div>
                         </div>
                     </div>
