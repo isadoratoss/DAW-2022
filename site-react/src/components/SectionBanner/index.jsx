@@ -34,10 +34,12 @@ const bairros = [
 
 export function SectionBanner() {
 
-    const { imoveis } = useImovel();
+    const { imoveis, setParamFilter } = useImovel();
+
+    const [filter, setFilter] = useState ({});
 
     function handleFilter() {
-        
+        setParamFilter(filter)
     }
 
     return (
@@ -50,25 +52,25 @@ export function SectionBanner() {
                 <div className="filter-fields">
 
                     <form>
-                        <select>
+                        <select onChange={event => setFilter({...filter, operacao: event.target.value})}>
                             {operacoes.map((item,index) => (
                                 <option key={ index } value={ item.valor }>{ item.rotulo }</option>
                             ))}
                         </select>
 
-                        <select>
+                        <select onChange={event => setFilter({...filter, tipo: event.target.value})}>
                             {tipos.map((item,index) => (
                                 <option key={ index } value={ item.valor }>{ item.rotulo }</option>
                             ))}
                         </select>
 
-                        <select>
+                        <select onChange={event => setFilter({...filter, cidade: event.target.value})}>
                             {cidades.map((item,index) => (
                                 <option key={ index } value={ item.valor }>{ item.rotulo }</option>
                             ))}                            
                         </select>
 
-                        <select>
+                        <select onChange={event => setFilter({...filter, bairro: event.target.value})}>
                             {bairros.map((item,index) => (
                                 <option key={ index } value={ item.valor }>{ item.rotulo }</option>
                             ))}                           
@@ -79,7 +81,7 @@ export function SectionBanner() {
 
                 <div className="filter-result">
                     <p className="result-value">{ imoveis.length }</p>
-                    <p className="result-label">Imóveis</p>
+                    <p className="result-label">{imoveis.lenght != 1 ? 'imóveis' : 'imovel' }</p>
                     <button onClick={ handleFilter }>Filtrar</button>
                 </div>
             </div>
